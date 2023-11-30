@@ -1,0 +1,13 @@
+- `Title`: Dataset for Generalized Estimating Equation Modeling
+- `Abstract`: This dataset contains the processed dependent data on COVID-19 incidence, spatial clustering data (state and COVID-19 cluster relative risk), and independent variables (demographic sub-categories of people with disability), used for generalized estimating equation modeling in our reproduction analysis. The data in this dataset is used in the generalized estimating equation modeling in order to understand whether COVID-19 incidence is more significant in counties with larger proportions of socio-demographically disadvantaged people with disabilities, based on race, ethnicity, poverty status, and biological sex, controlling for spatial clusters.
+- `Spatial Coverage`: The dataset only includes data on the contiguous states and on counties with positive COVID-19 rates and complete disability/poverty data. The data only contains cases of COVID-19 confirmed by local authorities, and the completeness and quality testing and reporting of cases has varied over space and time during the pandemic.
+- `Spatial Resolution`: County
+- `Spatial Reference System`: Albers Conical Equal Area
+- `Temporal Coverage`: 
+- `Temporal Resolution`: 
+- `Lineage`: The dataset is generated in Rmarkdown from covidcase080120.gpkg and acs.gpkg. Please refer to data\raw\public and data\raw\public\chakraborty for more information on the these files.
+When processing the data, we first join the COVID-19 data with our processed census data. We then run the Kulldorf Spatial Scan Statistics using the SpatialEpi package to determine the spatial cluster based on the number of cases. After that, we summarized the spatial scan clusters by county, calculated the relative risk score, and standardized our independent variables. Please refer to our Rmarkdown code (01-RPr-Chakraborty.Rmd) for more information on the processing steps</procdesc>
+- `Distribution`: 
+- `Constraints`: Users are free to use the dataset but redistribution of the dataset must retain the copyright notice under the  BSD 3-Clause License and the work should be properly cited as: Holler, J., Kedron, P., An-Pham, D., Burt, D., &amp; Zhou, J. (2022, June 16). Reproduction of Chakraborty 2021 Distribution of COVID-19 and intra-categorical analysis of people with disabilities. https://doi.org/10.17605/OSF.IO/S5MTQ 
+- `Data Quality`: 
+- `Variables`: 
